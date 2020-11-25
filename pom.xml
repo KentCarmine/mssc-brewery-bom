@@ -178,7 +178,9 @@
                 <executions>
                     <execution>
                         <id>enforce-versions</id>
-                        <goals>enforce</goals>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
                         <configuration>
                             <rules>
                                 <requireMavenVersion>
@@ -187,10 +189,10 @@
                                 <requireJavaVersion>
                                     <version>11</version>
                                 </requireJavaVersion>
-                                <requireReleaseDps>
+                                <requireReleaseDeps>
                                     <onlyWhenRelease>true</onlyWhenRelease>
                                     <message>Release builds must not have snapshot dependencies</message>
-                                </requireReleaseDps>
+                                </requireReleaseDeps>
                             </rules>
                         </configuration>
                     </execution>
